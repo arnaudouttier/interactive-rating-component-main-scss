@@ -1,26 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <main>
+  <RatingCard/>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import RatingCard from './components/RatingCard.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    RatingCard
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import "@/assets/scss/_global.scss";
+#app{
+  width: 100%;
+  height: 100vh;
+  font-family: $primary_font;
+  background-color: $Very_Dark_Blue;
 }
+
+main{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: inherit
+
+};
 </style>
