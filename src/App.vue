@@ -1,16 +1,16 @@
 <template>
   <main>
-  <RatingCard/>
+  <Card/>
   </main>
 </template>
 
 <script>
-import RatingCard from './components/RatingCard.vue'
+import Card from './components/Card.vue'
 
 export default {
   name: 'App',
   components: {
-    RatingCard
+    Card
   }
 }
 </script>

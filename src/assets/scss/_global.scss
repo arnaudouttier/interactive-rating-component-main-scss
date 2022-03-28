@@ -10,14 +10,64 @@
   font: inherit;
   margin: 0;
   padding: 0;
+  line-height: 1.5;
 }
 
 // 1rem = 10px
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
-body{
-    font-size: 2rem;
+body {
+  font-size: 2rem;
+}
+
+.btn {
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  transition:  background-color 0.4s ease;
+
+  &.circle-btn {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: $Very_Dark_Blue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: $White;
+      background-color: $Light_Grey;
+    }
+
+    &.active{
+      background-color: $Orange;
+      color: $White;
+    }
+  }
+
+  &.orange-btn {
+    width: 100%;
+    padding: 1.2rem 0;
+    background-color: $Orange;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: $White;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $White;
+      color: $Orange;
+    }
+  }
 }
