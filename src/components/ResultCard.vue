@@ -103,7 +103,7 @@
 export default {
   name: 'ResultCard',
   props: {
-    currentRaiting: String
+    currentRaiting: Number
   }
 }
 </script>
@@ -111,19 +111,26 @@ export default {
 <style  lang="scss">
 .result-card {
   text-align: center;
+
+  .card-icon {
+    margin-top: $margin_md;
+  }
+
+  .card-content {
+    margin-bottom: $margin_lg;
+  }
 }
 
 .result-score {
   margin-bottom: $margin_xxl;
 
-  h3{
-  display: inline;
-  color: $Orange;
-  background-color: $Very_Dark_Blue;
-  border-radius: 3rem;
-  padding: 5px 14px;
-font-size: 15px;
+  h3 {
+    display: inline;
+    color: $Orange;
+    background-color: $Grey_blue;
+    border-radius: 3rem;
+    padding: 7px 14px;
+    font-size: 15px;
   }
-
 }
 </style>

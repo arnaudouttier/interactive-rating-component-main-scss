@@ -18,7 +18,7 @@ export default {
 <style lang="scss">
 @import "@/assets/scss/_global.scss";
 #app{
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   font-family: $primary_font;
   background-color: $Very_Dark_Blue;
@@ -29,6 +29,5 @@ main{
   justify-content: center;
   align-items: center;
   height: inherit
-
 };
 </style>

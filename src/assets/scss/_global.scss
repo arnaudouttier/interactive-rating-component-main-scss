@@ -10,7 +10,7 @@
   font: inherit;
   margin: 0;
   padding: 0;
-  line-height: 1.5;
+  line-height: normal;
 }
 
 // 1rem = 10px
@@ -28,24 +28,25 @@ body {
   border: 0;
   color: inherit;
   cursor: pointer;
-  transition:  background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+  font-size: 1.5rem;
+  line-height: 1.2;
 
   &.circle-btn {
     width: 4.5rem;
     height: 4.5rem;
-    background-color: $Very_Dark_Blue;
+    background-color: $Grey_blue;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
 
     &:hover {
       color: $White;
       background-color: $Light_Grey;
     }
 
-    &.active{
+    &.active {
       background-color: $Orange;
       color: $White;
     }
@@ -53,13 +54,12 @@ body {
 
   &.orange-btn {
     width: 100%;
-    padding: 1.2rem 0;
+    padding: 0.9em 0;
     background-color: $Orange;
     border-radius: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
     color: $White;
     font-weight: 700;
     letter-spacing: 0.3rem;

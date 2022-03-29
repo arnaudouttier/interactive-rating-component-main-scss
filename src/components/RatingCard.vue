@@ -1,5 +1,5 @@
 <template>
-  <div class="raiting-card">
+  <div class="card-rating">
     <div class="card-icon btn circle-btn">
       <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -13,21 +13,21 @@
       Please let us know how we did with your support request. All feedback is
       appreciated to help us improve our offering!
     </p>
-    <div class="card-raiting">
+    <div class="rating-buttons">
       <button
         v-for="n in 5"
         :key="n"
         class="btn circle-btn"
         :value="n"
         @click="
-          getCurrentRaiting(n);
-          ActiveCurrentRaiting($event);
+          getCurrentRating(n);
+          ActiveCurrentRating($event);
         "
       >
         {{ n }}
       </button>
     </div>
-    <button @click="show = !show" class="card-submit btn orange-btn">
+    <button @click="toggleShow()" class="card-submit btn orange-btn">
       Submit
     </button>
   </div>
@@ -42,14 +42,17 @@ export default {
     }
   },
   methods: {
-    getCurrentRaiting (n) {
+    getCurrentRating (n) {
       this.$emit('crScore', n)
     },
-    ActiveCurrentRaiting (event) {
+    toggleShow () {
+      this.$emit('show', false)
+    },
+    ActiveCurrentRating (event) {
       document
-        .querySelectorAll('.card-raiting button')
-        .forEach((raitingButton) => {
-          raitingButton.classList.remove('active')
+        .querySelectorAll('.card-rating button')
+        .forEach((ratingButton) => {
+          ratingButton.classList.remove('active')
         })
       event.target.classList.toggle('active')
     }
@@ -58,9 +61,35 @@ export default {
 </script>
 
 <style  lang="scss">
-.card-raiting {
+.card-rating {
+  .card-icon {
+    &:hover {
+      background-color: $Grey_blue !important;
+    }
+  }
+}
+
+.card-icon,
+.card-title {
+  margin-bottom: $margin_md;
+  font-weight: 700;
+}
+
+.card-title {
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  color: $White;
+}
+
+.card-content {
+  margin-bottom: $margin_xxl;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  line-height: 2;
+}
+
+.rating-buttons {
   display: flex;
   justify-content: space-around;
+  margin-bottom: $margin_lg;
 }
 
 .card-submit {
