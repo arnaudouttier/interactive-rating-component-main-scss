@@ -83,7 +83,7 @@ export default {
 .card-content {
   margin-bottom: $margin_xxl;
   font-size: clamp(1rem, 5vw, 1.5rem);
-  line-height: 2;
+  line-height: 1.5;
 }
 
 .rating-buttons {

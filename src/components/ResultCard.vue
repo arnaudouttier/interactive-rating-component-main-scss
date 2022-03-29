@@ -123,6 +123,7 @@ export default {
 
 .result-score {
   margin-bottom: $margin_xxl;
+  font-size: clamp(1rem, 5vw, 1.5rem);
 
   h3 {
     display: inline;
